@@ -37,16 +37,10 @@ My main focus is:
 | Day 4 | Gradient Descent | ✅ Complete |
 | Day 5 | Batch Gradient Descent | ✅ Complete |
 | Day 6 | Linear Regression from Scratch | ✅ Complete |
+| Day 7 | NumPy Basics for Machine Learning | ✅ Complete |
 
-### 🔥 Current Progress: 6 Days Complete
+### 🔥 Current Progress: 7 Days Complete
 
 ---
 
-# 🧠 Day 1 — Understanding a Model
 
-Learned the basic idea of machine learning.
-
-Our first simple model was:
-
-```text
-prediction = input × weight
