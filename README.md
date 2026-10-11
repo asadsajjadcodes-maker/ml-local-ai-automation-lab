@@ -1,501 +1,219 @@
+<div align="center">
+
 # Machine Learning → Deep Learning → AI Engineering
 
-A practical, code-first learning journey from Machine Learning fundamentals to Deep Learning and AI Engineering.
+### A practical, code-first machine learning learning lab
 
-**Target completion date:** January 20, 2027
+I am building my machine learning foundations by implementing concepts in Python and NumPy, testing ideas with small experiments, and documenting each milestone as I go.
 
-The goal is not just to watch theory. Every lesson includes:
-- Simple explanations
-- Python/NumPy practice
-- Manual calculations
-- Experiments
-- Real-world connections
-- GitHub commits
-- Small challenges to make the concepts stick
+[![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-Scientific_Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Learning](https://img.shields.io/badge/Status-Active_Learning-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
----
+[Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
-## 🚀 Progress
-
-| Day | Topic | Status |
-|---|---|---|
-| Day 1 | Understanding Weights and Predictions | ✅ Complete |
-| Day 2 | Learning and Weight Updates | ✅ Complete |
-| Day 3 | Error, Squared Error and MSE | ✅ Complete |
-| Day 4 | Gradient Descent | ✅ Complete |
-| Day 5 | Multiple Examples / Batch Gradient Descent | ✅ Complete |
-| Day 6 | Learning Rate and Training Steps | ✅ Complete |
-| Day 7 | NumPy for Machine Learning | ✅ Complete |
-| Day 8 | Multiple Features + Dot Product | ✅ Complete |
-| Day 9 | Training a Multi-Feature Model | ✅ Complete |
-| Day 10 | Feature Scaling | ✅ Complete |
-| Day 11 | Train/Test Split | ⏳ Next |
+</div>
 
 ---
 
-# 🧠 Day 1 — Weights and Predictions
+## About this repository
 
-Started with the basic idea behind a machine learning model.
+This repository documents my step-by-step journey from the fundamentals of machine learning toward deep learning and AI engineering. Instead of relying only on theory or high-level libraries, I implement the core ideas with Python and NumPy so I can understand what happens during training.
 
-The model uses a **weight** to turn an input into a prediction.
+The examples are intentionally small and educational. They focus on understanding the mathematics, observing how model parameters change, and learning how to evaluate a model on data it has not seen during training.
 
-Basic idea:
+## Progress at a glance
 
-```text
-input × weight = prediction
-```
+**Completed: Days 1–13**  ·  **Current stage: Machine Learning Foundations**
 
-The important lesson was that we don't want to manually choose the perfect weight.
+| Day | Topic | What I practised | Status |
+|---:|---|---|:---:|
+| 1 | Weights and predictions | Use a weight to turn an input into a prediction | ✅ |
+| 2 | Learning and weight updates | Compare predictions with actual values and adjust a weight | ✅ |
+| 3 | Error, squared error, and MSE | Measure prediction error and calculate mean squared error | ✅ |
+| 4 | Gradient descent | Calculate gradients and update model parameters | ✅ |
+| 5 | Multiple training examples | Calculate errors and gradients across a batch of examples | ✅ |
+| 6 | Linear regression training | Connect predictions, loss, learning rate, and repeated updates | ✅ |
+| 7 | NumPy foundations | Use arrays and vectorized operations for ML calculations | ✅ |
+| 8 | Multiple features and dot products | Calculate predictions from several input features and weights | ✅ |
+| 9 | Training a multi-feature model | Learn multiple weights and a bias with gradient descent | ✅ |
+| 10 | Feature scaling | Apply min-max scaling to features with different ranges | ✅ |
+| 11 | Train/test split | Train on one subset and evaluate on held-out examples | ✅ |
+| 12 | Overfitting vs. underfitting | Compare training and test loss to diagnose model behaviour | ✅ |
+| 13 | Validation and model selection | Compare validation MSE and select the model with the lowest validation loss | ✅ |
 
-We want the computer to **learn the weight automatically**.
+## What I have learned so far
 
-### Key understanding
+### 1. How a model makes predictions
 
-> The weight helps the model make its prediction closer to the actual answer.
+For a simple linear model, a prediction is calculated from input features, learned weights, and a bias:
 
----
+\[
+\hat{y} = Xw + b
+\]
 
-# 🧠 Day 2 — Learning
+With one feature, this reduces to the familiar relationship between an input, its weight, and the bias. With multiple features, each feature contributes to the prediction through its corresponding weight.
 
-The model started learning instead of using one fixed weight.
+### 2. How training reduces error
 
-The basic cycle became:
+I implemented the basic training loop:
 
-```text
-Prediction
-    ↓
-Compare with actual answer
-    ↓
-Find error
-    ↓
-Change weight
-    ↓
-Predict again
-```
+1. Calculate predictions.
+2. Compare predictions with actual target values.
+3. Calculate the loss, using mean squared error (MSE).
+4. Calculate gradients for the weights and bias.
+5. Update the parameters using a learning rate.
+6. Repeat and observe how the loss changes.
 
-This introduced the idea that a machine learning model can improve through repeated training.
+The purpose is to understand how training works before depending on a machine learning framework to handle these steps.
 
----
+### 3. How to evaluate generalisation
 
-# 🧠 Day 3 — Error, Squared Error and MSE
+The later lessons introduce evaluation beyond the training dataset:
 
-Learned why simply using error can cause problems because errors can be positive or negative.
+- **Train/test split:** reserve examples to evaluate the trained model.
+- **Underfitting:** a model performs poorly even on its training data.
+- **Overfitting:** a model performs well on training data but poorly on unseen data.
+- **Validation and model selection:** compare candidate models using validation loss rather than choosing the model only by its training performance.
 
-Example:
+These lessons form the beginning of a more reliable machine learning workflow.
 
-```text
-Actual = 20
-Prediction = 10
-
-Error = 10
-```
-
-But if:
-
-```text
-Actual = 10
-Prediction = 20
-
-Error = -10
-```
-
-Squaring removes the negative sign:
+## Repository structure
 
 ```text
-(-10)² = 100
-10² = 100
+ml-local-ai-automation-lab/
+└── src/
+    └── ml core/
+        └── foundations/
+            ├── day01.py
+            ├── day02_learning_weight.py
+            ├── day03/
+            │   └── loss.py
+            ├── day04/
+            │   └── gradient_descent.py
+            ├── day05/
+            │   └── multiple_examples.py
+            ├── day06/
+            │   └── linear_regression.py
+            ├── day 07/
+            │   └── mumpy_basics.py
+            ├── day 08/
+            │   └── multiple_features.py
+            ├── day 09/
+            │   └── multi_feature_training.py
+            ├── day 10/
+            │   └── features_scaling.py
+            ├── day 11/
+            │   └── train_test_split.py
+            ├── day 12/
+            │   └── overfitting.py
+            └── day 13/
+                └── model_selection.py
 ```
 
-Then learned **Mean Squared Error (MSE)**:
+Each lesson is kept as a small Python script so I can run it, read the calculations, change parameters, and observe the result.
 
-```python
-mse = np.mean(error ** 2)
-```
+## Getting started
 
-### Key idea
+### Requirements
 
-> MSE measures how wrong the model's predictions are on average.
-
----
-
-# 🧠 Day 4 — Gradient Descent
-
-Learned how the computer can automatically adjust the weight.
-
-The model asks:
-
-> "Which direction should I move the weight to reduce the error?"
-
-This introduced the **gradient**.
-
-The basic idea:
-
-```text
-Calculate prediction
-        ↓
-Calculate error/loss
-        ↓
-Calculate gradient
-        ↓
-Update weight
-        ↓
-Repeat
-```
-
-The learning rate controls how big each update is.
-
----
-
-# 🧠 Day 5 — Multiple Examples
-
-Moved from training on one example to training on multiple examples.
-
-Learned that instead of looking at one example at a time, we can calculate the total/average loss and gradient across a batch.
-
-Important ideas:
-
-- Multiple training examples
-- Total loss
-- Average loss
-- Total gradient
-- Average gradient
-- Updating the weight using the average gradient
-
-This was the first step toward thinking about datasets rather than individual examples.
-
----
-
-# 🧠 Day 6 — Learning Rate and Training Steps
-
-Experimented with different learning rates.
-
-One important discovery was that:
-
-```text
-learning_rate = 0.01
-```
-
-can require far more than 100 training steps to converge.
-
-In one experiment it took roughly **1400 steps**.
-
-This showed an important real-world lesson:
-
-> There is no magic number of training steps that works for every learning rate and dataset.
-
-A smaller learning rate usually means smaller updates and can require more steps.
-
----
-
-# 🧠 Day 7 — NumPy
-
-Started using NumPy to perform machine learning calculations efficiently.
-
-Learned:
-
-```python
-np.array()
-np.mean()
-```
-
-and vectorized calculations.
-
-Instead of manually calculating every example, NumPy can process arrays together.
-
-For example:
-
-```python
-predictions = hours * weight + bias
-error = actual - predictions
-loss = error ** 2
-mse = np.mean(loss)
-```
-
-This was an important transition from manually calculated ML to actual ML code.
-
----
-
-# 🧠 Day 8 — Multiple Features + Dot Product
-
-Moved from a model with one feature to a model with multiple features.
-
-Instead of:
-
-```text
-one feature → one weight
-```
-
-we now have:
-
-```text
-feature 1 → weight 1
-feature 2 → weight 2
-feature 3 → weight 3
-```
-
-The model can be represented as:
-
-```text
-prediction =
-feature1 × weight1
-+
-feature2 × weight2
-+
-feature3 × weight3
-+
-bias
-```
-
-Learned to use:
-
-```python
-np.dot(features, weights)
-```
-
-Example:
-
-```python
-features = np.array([
-    [5, 7, 20],
-    [7, 8, 30],
-    [8, 6, 40]
-])
-
-weights = np.array([5, 2, 1])
-
-bias = 10
-
-predictions = np.dot(features, weights) + bias
-```
-
-This introduced the idea behind:
-
-```text
-XW + b
-```
-
-which is a fundamental operation in machine learning.
-
----
-
-# 🧠 Day 9 — Training a Multi-Feature Model
-
-Built a model that could **learn multiple weights automatically**.
-
-Dataset:
-
-```text
-Feature 1 = study hours
-Feature 2 = marks in class test
-Target = final exam score
-```
-
-The model started with:
-
-```python
-weights = np.array([1.0, 1.0])
-bias = 0.0
-```
-
-Then used gradient descent to learn better values.
-
-Core prediction:
-
-```python
-predictions = np.dot(X, weights) + bias
-```
-
-Gradient calculation:
-
-```python
-weight_gradient = (-2 / n) * np.dot(X.T, error)
-
-bias_gradient = (-2 / n) * np.sum(error)
-```
-
-Weight update:
-
-```python
-weights = weights - learning_rate * weight_gradient
-
-bias = bias - learning_rate * bias_gradient
-```
-
-After training, the model learned approximately:
-
-```text
-Weights = [1.33333333, 1.66666667]
-Bias    = 0.33333333
-```
-
-The predictions became:
-
-```text
-Actual:
-[5, 8, 11, 14, 17]
-
-Predictions:
-[5, 8, 11, 14, 17]
-```
-
-This was a major milestone because the model was no longer using manually chosen weights.
-
-It **learned the weights from data**.
-
----
-
-# 🧠 Day 10 — Feature Scaling
-
-Learned why features with very different numerical ranges can make training harder.
-
-Real-world example:
-
-```text
-house size = 2500
-bedrooms   = 5
-age        = 10
-```
-
-The features have very different scales.
-
-Learned **Min-Max Scaling**:
-
-```python
-x_scaled = (x - minimum) / (maximum - minimum)
-```
-
-This transforms values so they generally fall between:
-
-```text
-0 → 1
-```
-
-Example:
-
-```python
-minimum = X.min(axis=0)
-maximum = X.max(axis=0)
-
-X_scaled = (X - minimum) / (maximum - minimum)
-```
-
-Also learned:
-
-```python
-axis=0
-```
-
-means we calculate the minimum/maximum separately down each column.
-
-### Important understanding
-
-Feature scaling does **not** change the real-world meaning of the data.
-
-It changes the numerical representation so the learning algorithm can work with the features more effectively.
-
----
-
-# 🔥 Current ML Pipeline
-
-After 10 days, the learning pipeline looks like this:
-
-```text
-Raw Data
-   ↓
-Features
-   ↓
-Feature Scaling
-   ↓
-Weights + Bias
-   ↓
-Prediction
-   ↓
-Error
-   ↓
-Loss / MSE
-   ↓
-Gradient
-   ↓
-Update Weights
-   ↓
-Repeat
-```
-
-This is the foundation we will keep building on.
-
----
-
-# 🛠️ Tools Used So Far
-
-- Python
+- Python **3.12 or newer** is recommended for the current examples.
 - NumPy
-- VS Code
-- Git
-- GitHub
-- Fedora Linux
+- A terminal and a code editor
 
----
+### 1. Clone the repository
 
-# 🎯 Long-Term Roadmap
+```bash
+git clone https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab.git
+cd ml-local-ai-automation-lab
+```
 
-The complete goal is:
+### 2. Create and activate a virtual environment
+
+**Linux / macOS**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**Windows PowerShell**
+
+```powershell
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+### 3. Install NumPy
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install numpy
+```
+
+### 4. Run a lesson
+
+Run commands from the repository root. The quotation marks are important because some existing directory names contain spaces.
+
+```bash
+python "src/ml core/foundations/day 11/train_test_split.py"
+python "src/ml core/foundations/day 12/overfitting.py"
+python "src/ml core/foundations/day 13/model_selection.py"
+```
+
+You can run an earlier lesson by passing its script path in the same way.
+
+## Tools and concepts
+
+| Area | Tools / concepts |
+|---|---|
+| Programming | Python, functions, loops, basic data structures |
+| Numerical computing | NumPy arrays, vectorized operations, dot products |
+| Model fundamentals | Features, weights, bias, predictions |
+| Training | Mean squared error, gradients, gradient descent, learning rate |
+| Data preparation | Shuffling, train/test split, min-max feature scaling |
+| Evaluation | Training loss, test loss, validation loss, overfitting, underfitting, model selection |
+| Development workflow | VS Code, Git, GitHub, small experiments and incremental commits |
+
+## Learning workflow
+
+For each new concept, my goal is to:
+
+**Understand the idea → work through an example → write the Python code → experiment with the parameters → inspect the result → explain the lesson in my own words.**
+
+The priority is genuine understanding, not just getting a script to run.
+
+## Next steps
+
+The next stage is to strengthen evaluation and generalisation skills, then move toward more structured machine learning workflows. Planned topics include:
+
+- More evaluation metrics and validation techniques.
+- Classification fundamentals and appropriate evaluation methods.
+- Comparing from-scratch implementations with established ML tools such as scikit-learn.
+- Small end-to-end projects that combine data preparation, training, and evaluation.
+- Deep learning foundations after the core machine learning concepts are solid.
+
+These are learning goals, not claims that the topics have already been completed.
+
+## Long-term direction
 
 ```text
-Machine Learning
-       ↓
+Machine Learning Foundations
+            ↓
+Model Evaluation and Practical ML
+            ↓
 Deep Learning
-       ↓
-AI Engineering
-       ↓
-Real AI Projects
+            ↓
+AI Engineering and Applied Projects
 ```
 
-Target:
-
-**January 20, 2027**
-
-The learning approach will remain practical and code-first rather than theory-only.
+My long-term goal is to build a strong practical foundation for developing useful AI-powered tools and applications.
 
 ---
 
-# ⚔️ Learning Philosophy
+<div align="center">
 
-The goal is not to memorize formulas.
+**Progress: 13 learning days completed**  
+*Learn the concept. Implement it. Test it. Understand why it works.*
 
-For every important concept:
-
-```text
-Understand the idea
-       ↓
-Calculate it manually
-       ↓
-Write Python
-       ↓
-Experiment
-       ↓
-Break it
-       ↓
-Fix it
-       ↓
-Build something with it
-```
-
-The hardest concepts will be broken into small pieces and connected to real-world examples.
-
----
-
-# 📈 Progress
-
-**Days completed: 10**
-
-**Current stage: Machine Learning Foundations**
-
-**Next:** Day 11 — Train/Test Split and Generalization
-
----
-
-## 🏆 Mission
-
-> Don't just make the code run.
-
-> Understand **why** the code works.
+</div>
