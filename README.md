@@ -9,7 +9,8 @@ Building end-to-end mastery in machine learning, deep learning, and production A
 [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-Scientific_Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![Learning](https://img.shields.io/badge/Status-Day_18_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)](https://matplotlib.org/)
+[![Learning](https://img.shields.io/badge/Status-Day_19_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
 [Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
@@ -28,7 +29,7 @@ This repository documents my step-by-step engineering progression from foundatio
 
 ## 📈 Progress at a Glance
 
-**Completed: 18 Learning Days (Up to Day 18)** · **Current Stage: Machine Learning Foundations**
+**Completed: 19 Learning Days (Up to Day 19)** · **Current Stage: Machine Learning Foundations**
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
@@ -50,6 +51,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **16** | Model Evaluation: MSE, MAE, and RMSE | Implement MAE, MSE, and RMSE from scratch in NumPy and analyze metric sensitivity to extreme outliers | [`mae_mse_rmse.py`](src/ml%20core/foundations/day%2016/mae_mse_rmse.py) | ✅ |
 | **17** | Debugging Gradient Descent & Target Scaling | Normalize both input features ($X$) and target values ($y$) without leakage, select models, and invert scaling for dollar-denominated predictions | [`debugging_gradient_descent.py`](src/ml%20core/foundations/day%2017/debugging_gradient_descent.py) | ✅ |
 | **18** | Regression Metrics with Scikit-Learn | Benchmark regression predictions and outlier impact using `scikit-learn`'s `mean_absolute_error`, `mean_squared_error`, and `root_mean_squared_error` | [`regression_metrics.py`](src/ml%20core/foundations/day%2018/regression_metrics.py) | ✅ |
+| **19** | Residual and Error Analysis | Compute individual residuals ($y - \hat{y}$), analyze directional bias with mean residual & evaluation metrics (MAE, MSE, RMSE), and plot residual patterns via Matplotlib | [`residual_analysis.py`](src/ml%20core/foundations/day%2019/residual_analysis.py) | ✅ |
 
 ---
 
@@ -77,7 +79,8 @@ ml-local-ai-automation-lab/
 │           ├── day 15/   # End-to-end Train/Val/Test ML workflow
 │           ├── day 16/   # MAE, MSE & RMSE from scratch + outlier analysis
 │           ├── day 17/   # Target scaling, gradient debugging & inverse transforms
-│           └── day 18/   # Standardized regression metrics with Scikit-Learn
+│           ├── day 18/   # Standardized regression metrics with Scikit-Learn
+│           └── day 19/   # Residual and error analysis with Matplotlib diagnostics
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -105,10 +108,10 @@ For every concept introduced in this lab, I follow a structured 8-step engineeri
 ### Prerequisites
 
 - **Python 3.12+**
-- **NumPy** & **Scikit-Learn**
+- **NumPy**, **Scikit-Learn**, & **Matplotlib**
 
 ```bash
-pip install numpy scikit-learn
+pip install numpy scikit-learn matplotlib
 ```
 
 ### Running Any Daily Experiment
@@ -116,15 +119,15 @@ pip install numpy scikit-learn
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python "src/ml core/foundations/day 17/debugging_gradient_descent.py"
 python "src/ml core/foundations/day 18/regression_metrics.py"
+python "src/ml core/foundations/day 19/residual_analysis.py"
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 18 Learning Days Completed**  
+**Progress: 19 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
