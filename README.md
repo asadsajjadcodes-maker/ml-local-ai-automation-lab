@@ -10,7 +10,7 @@ Building end-to-end mastery in machine learning, deep learning, and production A
 [![NumPy](https://img.shields.io/badge/NumPy-Scientific_Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)](https://matplotlib.org/)
-[![Learning](https://img.shields.io/badge/Status-Day_20_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
+[![Learning](https://img.shields.io/badge/Status-Day_21_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
 [Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
@@ -29,7 +29,7 @@ This repository documents my step-by-step engineering progression from foundatio
 
 ## 📈 Progress at a Glance
 
-**Completed: 20 Learning Days (Up to Day 20)** · **Current Stage: Machine Learning Foundations**
+**Completed: 21 Learning Days (Up to Day 21)** · **Current Stage: Machine Learning Foundations**
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
@@ -53,6 +53,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **18** | Regression Metrics with Scikit-Learn | Benchmark regression predictions and outlier impact using `scikit-learn`'s `mean_absolute_error`, `mean_squared_error`, and `root_mean_squared_error` | [`regression_metrics.py`](src/ml%20core/foundations/day%2018/regression_metrics.py) | ✅ |
 | **19** | Residual and Error Analysis | Compute individual residuals ($y - \hat{y}$), analyze directional bias with mean residual & evaluation metrics (MAE, MSE, RMSE), and plot residual patterns via Matplotlib | [`residual_analysis.py`](src/ml%20core/foundations/day%2019/residual_analysis.py) | ✅ |
 | **20** | Feature Engineering | Construct domain-specific ratios, polynomial transformations, and feature interactions; combine matrices via `np.column_stack` | [`feature_engineering.py`](src/ml%20core/foundations/day%2020/feature_engineering.py) | ✅ |
+| **21** | Categorical Features & One-Hot Encoding | Separate numeric and categorical columns, encode multi-column categories with Scikit-Learn's `OneHotEncoder` (`handle_unknown="ignore"`, `sparse_output=False`), and assemble the unified feature matrix via `np.column_stack` | [`one_hot_encoding.py`](src/ml%20core/foundations/day%2021/one_hot_encoding.py) | ✅ |
 
 ---
 
@@ -82,7 +83,8 @@ ml-local-ai-automation-lab/
 │           ├── day 17/   # Target scaling, gradient debugging & inverse transforms
 │           ├── day 18/   # Standardized regression metrics with Scikit-Learn
 │           ├── day 19/   # Residual and error analysis with Matplotlib diagnostics
-│           └── day 20/   # Feature engineering: ratios, polynomial & interaction terms
+│           ├── day 20/   # Feature engineering: ratios, polynomial & interaction terms
+│           └── day 21/   # Categorical encoding with OneHotEncoder & matrix assembly
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -121,15 +123,15 @@ pip install numpy scikit-learn matplotlib
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python "src/ml core/foundations/day 19/residual_analysis.py"
 python "src/ml core/foundations/day 20/feature_engineering.py"
+python "src/ml core/foundations/day 21/one_hot_encoding.py"
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 20 Learning Days Completed**  
+**Progress: 21 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
