@@ -8,9 +8,10 @@ Building end-to-end mastery in machine learning, deep learning, and production A
 
 [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-Scientific_Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)](https://matplotlib.org/)
-[![Learning](https://img.shields.io/badge/Status-Day_22_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
+[![Learning](https://img.shields.io/badge/Status-Day_23_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
 [Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
@@ -29,7 +30,7 @@ This repository documents my step-by-step engineering progression from foundatio
 
 ## 📈 Progress at a Glance
 
-**Completed: 22 Learning Days (Up to Day 22)** · **Current Stage: Machine Learning Foundations**
+**Completed: 23 Learning Days (Up to Day 23)** · **Current Stage: Machine Learning Foundations**
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
@@ -55,6 +56,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **20** | Feature Engineering | Construct domain-specific ratios, polynomial transformations, and feature interactions; combine matrices via `np.column_stack` | [`feature_engineering.py`](src/ml%20core/foundations/day%2020/feature_engineering.py) | ✅ |
 | **21** | Categorical Features & One-Hot Encoding | Separate numeric and categorical columns, encode multi-column categories with Scikit-Learn's `OneHotEncoder` (`handle_unknown="ignore"`, `sparse_output=False`), and assemble the unified feature matrix via `np.column_stack` | [`one_hot_encoding.py`](src/ml%20core/foundations/day%2021/one_hot_encoding.py) | ✅ |
 | **22** | Handling Missing Values & Imputation | Detect missing values with `np.isnan`, prevent data leakage by fitting `SimpleImputer` (median strategy) strictly on training data, and transform test sets consistently | [`missing_values.py`](src/ml%20core/foundations/day%2022/missing_values.py) | ✅ |
+| **23** | End-to-End Preprocessing Pipelines | Build modular `Pipeline` workflows with `ColumnTransformer` (numeric imputation & standard scaling, categorical imputation & one-hot encoding), fit strictly on training data, and train `LinearRegression` | [`preprocessing_pipeline.py`](src/ml%20core/foundations/day%2023/preprocessing_pipeline.py) | ✅ |
 
 ---
 
@@ -86,7 +88,8 @@ ml-local-ai-automation-lab/
 │           ├── day 19/   # Residual and error analysis with Matplotlib diagnostics
 │           ├── day 20/   # Feature engineering: ratios, polynomial & interaction terms
 │           ├── day 21/   # Categorical encoding with OneHotEncoder & matrix assembly
-│           └── day 22/   # Missing data handling & imputation with SimpleImputer
+│           ├── day 22/   # Missing data handling & imputation with SimpleImputer
+│           └── day 23/   # Full preprocessing pipelines with ColumnTransformer & Pipeline
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -114,10 +117,10 @@ For every concept introduced in this lab, I follow a structured 8-step engineeri
 ### Prerequisites
 
 - **Python 3.12+**
-- **NumPy**, **Scikit-Learn**, & **Matplotlib**
+- **NumPy**, **Pandas**, **Scikit-Learn**, & **Matplotlib**
 
 ```bash
-pip install numpy scikit-learn matplotlib
+pip install numpy pandas scikit-learn matplotlib
 ```
 
 ### Running Any Daily Experiment
@@ -125,15 +128,15 @@ pip install numpy scikit-learn matplotlib
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python "src/ml core/foundations/day 21/one_hot_encoding.py"
 python "src/ml core/foundations/day 22/missing_values.py"
+python "src/ml core/foundations/day 23/preprocessing_pipeline.py"
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 22 Learning Days Completed**  
+**Progress: 23 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
