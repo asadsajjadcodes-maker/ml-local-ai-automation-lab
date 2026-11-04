@@ -11,7 +11,7 @@ Building end-to-end mastery in machine learning, deep learning, and production A
 [![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)](https://matplotlib.org/)
-[![Learning](https://img.shields.io/badge/Status-Day_24_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
+[![Learning](https://img.shields.io/badge/Status-Day_25_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
 [Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
@@ -30,7 +30,7 @@ This repository documents my step-by-step engineering progression from foundatio
 
 ## 📈 Progress at a Glance
 
-**Completed: 24 Learning Days (Up to Day 24)** · **Current Stage: Machine Learning Foundations**
+**Completed: 25 Learning Days (Up to Day 25)** · **Current Stage: Machine Learning Foundations**
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
@@ -58,6 +58,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **22** | Handling Missing Values & Imputation | Detect missing values with `np.isnan`, prevent data leakage by fitting `SimpleImputer` (median strategy) strictly on training data, and transform test sets consistently | [`missing_values.py`](src/ml%20core/foundations/day%2022/missing_values.py) | ✅ |
 | **23** | End-to-End Preprocessing Pipelines | Build modular `Pipeline` workflows with `ColumnTransformer` (numeric imputation & standard scaling, categorical imputation & one-hot encoding), fit strictly on training data, and train `LinearRegression` | [`preprocessing_pipeline.py`](src/ml%20core/foundations/day%2023/preprocessing_pipeline.py) | ✅ |
 | **24** | Linear Regression with Scikit-Learn | Train Scikit-Learn's `LinearRegression` on train/test splits, inspect learned parameters (`coef_`, `intercept_`), evaluate test performance via MAE & MSE, and predict on unseen inputs | [`linear_regression_sklearn.py`](src/ml%20core/foundations/day%2024/linear_regression_sklearn.py) | ✅ |
+| **25** | Multiple Linear Regression with Scikit-Learn | Train a multivariate `LinearRegression` model on multi-feature data (size, bedrooms, age), inspect weight vectors (`coef_`) and bias (`intercept_`), evaluate generalization via MAE & MSE, and predict on unseen multivariate samples | [`multiple_linear_regression.py`](src/ml%20core/foundations/day%2025/multiple_linear_regression.py) | ✅ |
 
 ---
 
@@ -91,7 +92,8 @@ ml-local-ai-automation-lab/
 │           ├── day 21/   # Categorical encoding with OneHotEncoder & matrix assembly
 │           ├── day 22/   # Missing data handling & imputation with SimpleImputer
 │           ├── day 23/   # Full preprocessing pipelines with ColumnTransformer & Pipeline
-│           └── day 24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
+│           ├── day 24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
+│           └── day 25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -130,15 +132,15 @@ pip install numpy pandas scikit-learn matplotlib
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python "src/ml core/foundations/day 23/preprocessing_pipeline.py"
 python "src/ml core/foundations/day 24/linear_regression_sklearn.py"
+python "src/ml core/foundations/day 25/multiple_linear_regression.py"
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 24 Learning Days Completed**  
+**Progress: 25 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
