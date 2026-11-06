@@ -34,31 +34,31 @@ This repository documents my step-by-step engineering progression from foundatio
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
-| **01** | Weights and Predictions | Map input features to target predictions using a linear weight and compute total absolute error | [`day01.py`](src/ml%20core/foundations/day%2001/day01.py) | ✅ |
-| **02** | Learning and Weight Updates | Iteratively refine a model weight using prediction error and a controlled learning rate | [`day02_learning_weight.py`](src/ml%20core/foundations/day%2002/day02_learning_weight.py) | ✅ |
-| **03** | Error, Squared Error, and MSE | Quantify model performance by computing residuals, squared errors, and Mean Squared Error (MSE) | [`loss.py`](src/ml%20core/foundations/day%2003/loss.py) | ✅ |
-| **04** | Gradient Descent | Derive analytical gradients of squared loss and update parameters opposite to the gradient slope | [`gradient_descent.py`](src/ml%20core/foundations/day%2004/gradient_descent.py) | ✅ |
-| **05** | Multiple Training Examples | Aggregate and average losses and gradients across a full batch of training examples | [`multiple_examples.py`](src/ml%20core/foundations/day%2005/multiple_examples.py) | ✅ |
-| **06** | Linear Regression Training | Train a full univariate linear regression model ($y = wx + b$) over 3,500 epochs and run inference | [`linear_regression.py`](src/ml%20core/foundations/day%2006/linear_regression.py) | ✅ |
-| **07** | NumPy Foundations | Replace Python loops with vectorized NumPy array broadcasting for forward pass and MSE calculation | [`numpy_basics.py`](src/ml%20core/foundations/day%2007/numpy_basics.py) | ✅ |
-| **08** | Multiple Features and Dot Products | Combine multiple input features into 2D matrices and compute vectorized predictions via `np.dot` | [`multiple_features.py`](src/ml%20core/foundations/day%2008/multiple_features.py) | ✅ |
-| **09** | Training a Multi-Feature Model | Optimize multiple feature weights and bias simultaneously using matrix transpose gradient descent | [`multi_feature_training.py`](src/ml%20core/foundations/day%2009/multi_feature_training.py) | ✅ |
-| **10** | Feature Scaling | Apply column-wise Min-Max normalization to multi-scale features for stable gradient convergence | [`feature_scaling.py`](src/ml%20core/foundations/day%2010/feature_scaling.py) | ✅ |
-| **11** | Train/Test Split | Shuffle datasets deterministically (`seed=42`), partition 80/20 train/test splits, and evaluate generalization | [`train_test_split.py`](src/ml%20core/foundations/day%2011/train_test_split.py) | ✅ |
-| **12** | Overfitting vs. Underfitting | Build diagnostic heuristics comparing training MSE and testing MSE to detect high bias or high variance | [`overfitting.py`](src/ml%20core/foundations/day%2012/overfitting.py) | ✅ |
-| **13** | Validation and Model Selection | Compare candidate models systematically and select the optimal architecture via lowest validation MSE | [`model_selection.py`](src/ml%20core/foundations/day%2013/model_selection.py) | ✅ |
-| **14** | Data Leakage and Scaling Safely | Prevent data leakage by fitting Min-Max scalers strictly on the 70% training split before transforming val/test sets | [`leakage_and_scaling.py`](src/ml%20core/foundations/day%2014/leakage_and_scaling.py) | ✅ |
-| **15** | Complete ML Workflow (Train/Val/Test) | End-to-end pipeline: shuffle, split (70/15/15), zero-safe scaling, multi-model selection, and held-out test evaluation | [`complete_ml_workflow.py`](src/ml%20core/foundations/day%2015/complete_ml_workflow.py) | ✅ |
-| **16** | Model Evaluation: MSE, MAE, and RMSE | Implement MAE, MSE, and RMSE from scratch in NumPy and analyze metric sensitivity to extreme outliers | [`mae_mse_rmse.py`](src/ml%20core/foundations/day%2016/mae_mse_rmse.py) | ✅ |
-| **17** | Debugging Gradient Descent & Target Scaling | Normalize both input features ($X$) and target values ($y$) without leakage, select models, and invert scaling for dollar-denominated predictions | [`debugging_gradient_descent.py`](src/ml%20core/foundations/day%2017/debugging_gradient_descent.py) | ✅ |
-| **18** | Regression Metrics with Scikit-Learn | Benchmark regression predictions and outlier impact using `scikit-learn`'s `mean_absolute_error`, `mean_squared_error`, and `root_mean_squared_error` | [`regression_metrics.py`](src/ml%20core/foundations/day%2018/regression_metrics.py) | ✅ |
-| **19** | Residual and Error Analysis | Compute individual residuals ($y - \hat{y}$), analyze directional bias with mean residual & evaluation metrics (MAE, MSE, RMSE), and plot residual patterns via Matplotlib | [`residual_analysis.py`](src/ml%20core/foundations/day%2019/residual_analysis.py) | ✅ |
-| **20** | Feature Engineering | Construct domain-specific ratios, polynomial transformations, and feature interactions; combine matrices via `np.column_stack` | [`feature_engineering.py`](src/ml%20core/foundations/day%2020/feature_engineering.py) | ✅ |
-| **21** | Categorical Features & One-Hot Encoding | Separate numeric and categorical columns, encode multi-column categories with Scikit-Learn's `OneHotEncoder` (`handle_unknown="ignore"`, `sparse_output=False`), and assemble the unified feature matrix via `np.column_stack` | [`one_hot_encoding.py`](src/ml%20core/foundations/day%2021/one_hot_encoding.py) | ✅ |
-| **22** | Handling Missing Values & Imputation | Detect missing values with `np.isnan`, prevent data leakage by fitting `SimpleImputer` (median strategy) strictly on training data, and transform test sets consistently | [`missing_values.py`](src/ml%20core/foundations/day%2022/missing_values.py) | ✅ |
-| **23** | End-to-End Preprocessing Pipelines | Build modular `Pipeline` workflows with `ColumnTransformer` (numeric imputation & standard scaling, categorical imputation & one-hot encoding), fit strictly on training data, and train `LinearRegression` | [`preprocessing_pipeline.py`](src/ml%20core/foundations/day%2023/preprocessing_pipeline.py) | ✅ |
-| **24** | Linear Regression with Scikit-Learn | Train Scikit-Learn's `LinearRegression` on train/test splits, inspect learned parameters (`coef_`, `intercept_`), evaluate test performance via MAE & MSE, and predict on unseen inputs | [`linear_regression_sklearn.py`](src/ml%20core/foundations/day%2024/linear_regression_sklearn.py) | ✅ |
-| **25** | Multiple Linear Regression with Scikit-Learn | Train a multivariate `LinearRegression` model on multi-feature data (size, bedrooms, age), inspect weight vectors (`coef_`) and bias (`intercept_`), evaluate generalization via MAE & MSE, and predict on unseen multivariate samples | [`multiple_linear_regression.py`](src/ml%20core/foundations/day%2025/multiple_linear_regression.py) | ✅ |
+| **01** | Weights and Predictions | Map input features to target predictions using a linear weight and compute total absolute error | [`day01.py`](src/ml_core/foundations/day_01/day01.py) | ✅ |
+| **02** | Learning and Weight Updates | Iteratively refine a model weight using prediction error and a controlled learning rate | [`day02_learning_weight.py`](src/ml_core/foundations/day_02/day02_learning_weight.py) | ✅ |
+| **03** | Error, Squared Error, and MSE | Quantify model performance by computing residuals, squared errors, and Mean Squared Error (MSE) | [`loss.py`](src/ml_core/foundations/day_03/loss.py) | ✅ |
+| **04** | Gradient Descent | Derive analytical gradients of squared loss and update parameters opposite to the gradient slope | [`gradient_descent.py`](src/ml_core/foundations/day_04/gradient_descent.py) | ✅ |
+| **05** | Multiple Training Examples | Aggregate and average losses and gradients across a full batch of training examples | [`multiple_examples.py`](src/ml_core/foundations/day_05/multiple_examples.py) | ✅ |
+| **06** | Linear Regression Training | Train a full univariate linear regression model ($y = wx + b$) over 3,500 epochs and run inference | [`linear_regression.py`](src/ml_core/foundations/day_06/linear_regression.py) | ✅ |
+| **07** | NumPy Foundations | Replace Python loops with vectorized NumPy array broadcasting for forward pass and MSE calculation | [`numpy_basics.py`](src/ml_core/foundations/day_07/numpy_basics.py) | ✅ |
+| **08** | Multiple Features and Dot Products | Combine multiple input features into 2D matrices and compute vectorized predictions via `np.dot` | [`multiple_features.py`](src/ml_core/foundations/day_08/multiple_features.py) | ✅ |
+| **09** | Training a Multi-Feature Model | Optimize multiple feature weights and bias simultaneously using matrix transpose gradient descent | [`multi_feature_training.py`](src/ml_core/foundations/day_09/multi_feature_training.py) | ✅ |
+| **10** | Feature Scaling | Apply column-wise Min-Max normalization to multi-scale features for stable gradient convergence | [`feature_scaling.py`](src/ml_core/foundations/day_10/feature_scaling.py) | ✅ |
+| **11** | Train/Test Split | Shuffle datasets deterministically (`seed=42`), partition 80/20 train/test splits, and evaluate generalization | [`train_test_split.py`](src/ml_core/foundations/day_11/train_test_split.py) | ✅ |
+| **12** | Overfitting vs. Underfitting | Build diagnostic heuristics comparing training MSE and testing MSE to detect high bias or high variance | [`overfitting.py`](src/ml_core/foundations/day_12/overfitting.py) | ✅ |
+| **13** | Validation and Model Selection | Compare candidate models systematically and select the optimal architecture via lowest validation MSE | [`model_selection.py`](src/ml_core/foundations/day_13/model_selection.py) | ✅ |
+| **14** | Data Leakage and Scaling Safely | Prevent data leakage by fitting Min-Max scalers strictly on the 70% training split before transforming val/test sets | [`leakage_and_scaling.py`](src/ml_core/foundations/day_14/leakage_and_scaling.py) | ✅ |
+| **15** | Complete ML Workflow (Train/Val/Test) | End-to-end pipeline: shuffle, split (70/15/15), zero-safe scaling, multi-model selection, and held-out test evaluation | [`complete_ml_workflow.py`](src/ml_core/foundations/day_15/complete_ml_workflow.py) | ✅ |
+| **16** | Model Evaluation: MSE, MAE, and RMSE | Implement MAE, MSE, and RMSE from scratch in NumPy and analyze metric sensitivity to extreme outliers | [`mae_mse_rmse.py`](src/ml_core/foundations/day_16/mae_mse_rmse.py) | ✅ |
+| **17** | Debugging Gradient Descent & Target Scaling | Normalize both input features ($X$) and target values ($y$) without leakage, select models, and invert scaling for dollar-denominated predictions | [`debugging_gradient_descent.py`](src/ml_core/foundations/day_17/debugging_gradient_descent.py) | ✅ |
+| **18** | Regression Metrics with Scikit-Learn | Benchmark regression predictions and outlier impact using `scikit-learn`'s `mean_absolute_error`, `mean_squared_error`, and `root_mean_squared_error` | [`regression_metrics.py`](src/ml_core/foundations/day_18/regression_metrics.py) | ✅ |
+| **19** | Residual and Error Analysis | Compute individual residuals ($y - \hat{y}$), analyze directional bias with mean residual & evaluation metrics (MAE, MSE, RMSE), and plot residual patterns via Matplotlib | [`residual_analysis.py`](src/ml_core/foundations/day_19/residual_analysis.py) | ✅ |
+| **20** | Feature Engineering | Construct domain-specific ratios, polynomial transformations, and feature interactions; combine matrices via `np.column_stack` | [`feature_engineering.py`](src/ml_core/foundations/day_20/feature_engineering.py) | ✅ |
+| **21** | Categorical Features & One-Hot Encoding | Separate numeric and categorical columns, encode multi-column categories with Scikit-Learn's `OneHotEncoder` (`handle_unknown="ignore"`, `sparse_output=False`), and assemble the unified feature matrix via `np.column_stack` | [`one_hot_encoding.py`](src/ml_core/foundations/day_21/one_hot_encoding.py) | ✅ |
+| **22** | Handling Missing Values & Imputation | Detect missing values with `np.isnan`, prevent data leakage by fitting `SimpleImputer` (median strategy) strictly on training data, and transform test sets consistently | [`missing_values.py`](src/ml_core/foundations/day_22/missing_values.py) | ✅ |
+| **23** | End-to-End Preprocessing Pipelines | Build modular `Pipeline` workflows with `ColumnTransformer` (numeric imputation & standard scaling, categorical imputation & one-hot encoding), fit strictly on training data, and train `LinearRegression` | [`preprocessing_pipeline.py`](src/ml_core/foundations/day_23/preprocessing_pipeline.py) | ✅ |
+| **24** | Linear Regression with Scikit-Learn | Train Scikit-Learn's `LinearRegression` on train/test splits, inspect learned parameters (`coef_`, `intercept_`), evaluate test performance via MAE & MSE, and predict on unseen inputs | [`linear_regression_sklearn.py`](src/ml_core/foundations/day_24/linear_regression_sklearn.py) | ✅ |
+| **25** | Multiple Linear Regression with Scikit-Learn | Train a multivariate `LinearRegression` model on multi-feature data (size, bedrooms, age), inspect weight vectors (`coef_`) and bias (`intercept_`), evaluate generalization via MAE & MSE, and predict on unseen multivariate samples | [`multiple_linear_regression.py`](src/ml_core/foundations/day_25/multiple_linear_regression.py) | ✅ |
 
 ---
 
@@ -67,33 +67,33 @@ This repository documents my step-by-step engineering progression from foundatio
 ```text
 ml-local-ai-automation-lab/
 ├── src/
-│   └── ml core/
+│   └── ml_core/
 │       └── foundations/
-│           ├── day 01/   # Linear predictions & absolute loss
-│           ├── day 02/   # Iterative weight learning
-│           ├── day 03/   # Squared error & Mean Squared Error (MSE)
-│           ├── day 04/   # Single-feature Gradient Descent
-│           ├── day 05/   # Batch Gradient Descent across multiple examples
-│           ├── day 06/   # Full Linear Regression (weight + bias) & inference
-│           ├── day 07/   # Vectorized operations with NumPy arrays
-│           ├── day 08/   # Multivariate features & matrix dot products
-│           ├── day 09/   # Multi-feature Linear Regression training
-│           ├── day 10/   # Min-Max feature normalization
-│           ├── day 11/   # Reproducible shuffling & Train/Test evaluation
-│           ├── day 12/   # Diagnosing Overfitting vs. Underfitting
-│           ├── day 13/   # Validation-driven model selection
-│           ├── day 14/   # Leakage-free preprocessing pipelines
-│           ├── day 15/   # End-to-end Train/Val/Test ML workflow
-│           ├── day 16/   # MAE, MSE & RMSE from scratch + outlier analysis
-│           ├── day 17/   # Target scaling, gradient debugging & inverse transforms
-│           ├── day 18/   # Standardized regression metrics with Scikit-Learn
-│           ├── day 19/   # Residual and error analysis with Matplotlib diagnostics
-│           ├── day 20/   # Feature engineering: ratios, polynomial & interaction terms
-│           ├── day 21/   # Categorical encoding with OneHotEncoder & matrix assembly
-│           ├── day 22/   # Missing data handling & imputation with SimpleImputer
-│           ├── day 23/   # Full preprocessing pipelines with ColumnTransformer & Pipeline
-│           ├── day 24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
-│           └── day 25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
+│           ├── day_01/   # Linear predictions & absolute loss
+│           ├── day_02/   # Iterative weight learning
+│           ├── day_03/   # Squared error & Mean Squared Error (MSE)
+│           ├── day_04/   # Single-feature Gradient Descent
+│           ├── day_05/   # Batch Gradient Descent across multiple examples
+│           ├── day_06/   # Full Linear Regression (weight + bias) & inference
+│           ├── day_07/   # Vectorized operations with NumPy arrays
+│           ├── day_08/   # Multivariate features & matrix dot products
+│           ├── day_09/   # Multi-feature Linear Regression training
+│           ├── day_10/   # Min-Max feature normalization
+│           ├── day_11/   # Reproducible shuffling & Train/Test evaluation
+│           ├── day_12/   # Diagnosing Overfitting vs. Underfitting
+│           ├── day_13/   # Validation-driven model selection
+│           ├── day_14/   # Leakage-free preprocessing pipelines
+│           ├── day_15/   # End-to-end Train/Val/Test ML workflow
+│           ├── day_16/   # MAE, MSE & RMSE from scratch + outlier analysis
+│           ├── day_17/   # Target scaling, gradient debugging & inverse transforms
+│           ├── day_18/   # Standardized regression metrics with Scikit-Learn
+│           ├── day_19/   # Residual and error analysis with Matplotlib diagnostics
+│           ├── day_20/   # Feature engineering: ratios, polynomial & interaction terms
+│           ├── day_21/   # Categorical encoding with OneHotEncoder & matrix assembly
+│           ├── day_22/   # Missing data handling & imputation with SimpleImputer
+│           ├── day_23/   # Full preprocessing pipelines with ColumnTransformer & Pipeline
+│           ├── day_24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
+│           └── day_25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -132,8 +132,8 @@ pip install numpy pandas scikit-learn matplotlib
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python "src/ml core/foundations/day 24/linear_regression_sklearn.py"
-python "src/ml core/foundations/day 25/multiple_linear_regression.py"
+python src/ml_core/foundations/day_24/linear_regression_sklearn.py
+python src/ml_core/foundations/day_25/multiple_linear_regression.py
 ```
 
 ---
