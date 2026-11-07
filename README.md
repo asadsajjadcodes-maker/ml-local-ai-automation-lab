@@ -59,6 +59,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **23** | End-to-End Preprocessing Pipelines | Build modular `Pipeline` workflows with `ColumnTransformer` (numeric imputation & standard scaling, categorical imputation & one-hot encoding), fit strictly on training data, and train `LinearRegression` | [`preprocessing_pipeline.py`](src/ml_core/foundations/day_23/preprocessing_pipeline.py) | ✅ |
 | **24** | Linear Regression with Scikit-Learn | Train Scikit-Learn's `LinearRegression` on train/test splits, inspect learned parameters (`coef_`, `intercept_`), evaluate test performance via MAE & MSE, and predict on unseen inputs | [`linear_regression_sklearn.py`](src/ml_core/foundations/day_24/linear_regression_sklearn.py) | ✅ |
 | **25** | Multiple Linear Regression with Scikit-Learn | Train a multivariate `LinearRegression` model on multi-feature data (size, bedrooms, age), inspect weight vectors (`coef_`) and bias (`intercept_`), evaluate generalization via MAE & MSE, and predict on unseen multivariate samples | [`multiple_linear_regression.py`](src/ml_core/foundations/day_25/multiple_linear_regression.py) | ✅ |
+| **26** | Polynomial Features & Non-Linear Regression | Transform single features into higher-order polynomial spaces via `PolynomialFeatures` to capture non-linear quadratic relationships, train `LinearRegression`, and evaluate predictions | [`polynomial_regression.py`](src/ml_core/foundations/day_26/polynomial_regression.py) | ✅ |
 
 ---
 
@@ -93,7 +94,8 @@ ml-local-ai-automation-lab/
 │           ├── day_22/   # Missing data handling & imputation with SimpleImputer
 │           ├── day_23/   # Full preprocessing pipelines with ColumnTransformer & Pipeline
 │           ├── day_24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
-│           └── day_25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
+│           ├── day_25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
+│           └── day_26/   # Polynomial regression: non-linear feature transformation & evaluation
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -132,15 +134,15 @@ pip install numpy pandas scikit-learn matplotlib
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python src/ml_core/foundations/day_24/linear_regression_sklearn.py
 python src/ml_core/foundations/day_25/multiple_linear_regression.py
+python src/ml_core/foundations/day_26/polynomial_regression.py
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 25 Learning Days Completed**  
+**Progress: 26 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
