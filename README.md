@@ -60,7 +60,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **24** | Linear Regression with Scikit-Learn | Train Scikit-Learn's `LinearRegression` on train/test splits, inspect learned parameters (`coef_`, `intercept_`), evaluate test performance via MAE & MSE, and predict on unseen inputs | [`linear_regression_sklearn.py`](src/ml_core/foundations/day_24/linear_regression_sklearn.py) | ✅ |
 | **25** | Multiple Linear Regression with Scikit-Learn | Train a multivariate `LinearRegression` model on multi-feature data (size, bedrooms, age), inspect weight vectors (`coef_`) and bias (`intercept_`), evaluate generalization via MAE & MSE, and predict on unseen multivariate samples | [`multiple_linear_regression.py`](src/ml_core/foundations/day_25/multiple_linear_regression.py) | ✅ |
 | **26** | Polynomial Features & Non-Linear Regression | Transform single features into higher-order polynomial spaces via `PolynomialFeatures` to capture non-linear quadratic relationships, train `LinearRegression`, and evaluate predictions | [`polynomial_regression.py`](src/ml_core/foundations/day_26/polynomial_regression.py) | ✅ |
-| **27** | Model Complexity & Bias-Variance Trade-Off | Evaluate polynomial models across multiple complexity degrees ($d \in [1, 20]$), benchmark train vs. test MSE, and analyze the transition from underfitting to optimal fit and severe overfitting | [`model_complexity.py`](src/ml_core/foundations/day_27/model_complexity.py) | ✅ |
+| **27** | Model Complexity & Bias-Variance Trade-Off | Evaluate polynomial models across degrees ($d \in [1, 20]$), benchmark train vs. test MSE, and visualize underfitting vs. overfitting prediction curves via Matplotlib | [`model_complexity.py`](src/ml_core/foundations/day_27/model_complexity.py) | ✅ |
 
 ---
 
@@ -97,7 +97,7 @@ ml-local-ai-automation-lab/
 │           ├── day_24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
 │           ├── day_25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
 │           ├── day_26/   # Polynomial regression: non-linear feature transformation & evaluation
-│           └── day_27/   # Model complexity: polynomial degrees & bias-variance trade-off
+│           └── day_27/   # Model complexity: polynomial degrees, bias-variance trade-off & Matplotlib visualization
 ├── .gitattributes
 ├── .gitignore
 └── README.md
