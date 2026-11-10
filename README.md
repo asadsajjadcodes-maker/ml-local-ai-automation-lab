@@ -61,6 +61,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **25** | Multiple Linear Regression with Scikit-Learn | Train a multivariate `LinearRegression` model on multi-feature data (size, bedrooms, age), inspect weight vectors (`coef_`) and bias (`intercept_`), evaluate generalization via MAE & MSE, and predict on unseen multivariate samples | [`multiple_linear_regression.py`](src/ml_core/foundations/day_25/multiple_linear_regression.py) | ✅ |
 | **26** | Polynomial Features & Non-Linear Regression | Transform single features into higher-order polynomial spaces via `PolynomialFeatures` to capture non-linear quadratic relationships, train `LinearRegression`, and evaluate predictions | [`polynomial_regression.py`](src/ml_core/foundations/day_26/polynomial_regression.py) | ✅ |
 | **27** | Model Complexity & Bias-Variance Trade-Off | Evaluate polynomial models across degrees ($d \in [1, 20]$), benchmark train vs. test MSE, and visualize underfitting vs. overfitting prediction curves via Matplotlib | [`model_complexity.py`](src/ml_core/foundations/day_27/model_complexity.py) | ✅ |
+| **28** | Regularization: Ridge vs. Lasso | Compare unregularized `LinearRegression`, L2 `Ridge` (weight shrinkage), and L1 `Lasso` (sparsity & feature selection) on multi-feature noisy data using scaled pipelines | [`ridge_lesso.py`](src/ml_core/foundations/day_28/ridge_lesso.py) | ✅ |
 
 ---
 
@@ -97,7 +98,8 @@ ml-local-ai-automation-lab/
 │           ├── day_24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
 │           ├── day_25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
 │           ├── day_26/   # Polynomial regression: non-linear feature transformation & evaluation
-│           └── day_27/   # Model complexity: polynomial degrees, bias-variance trade-off & Matplotlib visualization
+│           ├── day_27/   # Model complexity: polynomial degrees, bias-variance trade-off & Matplotlib visualization
+│           └── day_28/   # Regularization: Ridge (L2 shrinkage) vs. Lasso (L1 sparsity & feature selection)
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -136,15 +138,15 @@ pip install numpy pandas scikit-learn matplotlib
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python src/ml_core/foundations/day_26/polynomial_regression.py
 python src/ml_core/foundations/day_27/model_complexity.py
+python src/ml_core/foundations/day_28/ridge_lesso.py
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 27 Learning Days Completed**  
+**Progress: 28 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
