@@ -63,6 +63,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **27** | Model Complexity & Bias-Variance Trade-Off | Evaluate polynomial models across degrees ($d \in [1, 20]$), benchmark train vs. test MSE, and visualize underfitting vs. overfitting prediction curves via Matplotlib | [`model_complexity.py`](src/ml_core/foundations/day_27/model_complexity.py) | ✅ |
 | **28** | Regularization: Ridge vs. Lasso | Compare unregularized `LinearRegression`, L2 `Ridge` (weight shrinkage), and L1 `Lasso` (sparsity & feature selection) on multi-feature noisy data using scaled pipelines | [`ridge_lesso.py`](src/ml_core/foundations/day_28/ridge_lesso.py) | ✅ |
 | **29** | K-Fold Cross-Validation & Model Selection | Evaluate models using 5-Fold Cross-Validation (`cross_val_score`) in leak-free pipelines, quantify stability via fold variance ($\sigma$), select the optimal hyperparameter, and evaluate on held-out test data | [`cross_validation.py`](src/ml_core/foundations/day_29/cross_validation.py) | ✅ |
+| **30** | Hyperparameter Tuning with GridSearchCV | Automate hyperparameter search over $\alpha$ values for Ridge and Lasso using 10-fold `GridSearchCV` inside `StandardScaler` pipelines, compare CV scores, and evaluate on held-out test data | [`hyperparameter_tuning.py`](src/ml_core/foundations/day_30/hyperparameter_tuning.py) | ✅ |
 
 ---
 
@@ -101,7 +102,8 @@ ml-local-ai-automation-lab/
 │           ├── day_26/   # Polynomial regression: non-linear feature transformation & evaluation
 │           ├── day_27/   # Model complexity: polynomial degrees, bias-variance trade-off & Matplotlib visualization
 │           ├── day_28/   # Regularization: Ridge (L2 shrinkage) vs. Lasso (L1 sparsity & feature selection)
-│           └── day_29/   # K-Fold Cross-Validation: leak-free pipeline evaluation, fold variance & model selection
+│           ├── day_29/   # K-Fold Cross-Validation: leak-free pipeline evaluation, fold variance & model selection
+│           └── day_30/   # Hyperparameter tuning: GridSearchCV over Ridge & Lasso alpha values
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -140,15 +142,15 @@ pip install numpy pandas scikit-learn matplotlib
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python src/ml_core/foundations/day_28/ridge_lesso.py
 python src/ml_core/foundations/day_29/cross_validation.py
+python src/ml_core/foundations/day_30/hyperparameter_tuning.py
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 29 Learning Days Completed**  
+**Progress: 30 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
