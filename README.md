@@ -11,7 +11,7 @@ Building end-to-end mastery in machine learning, deep learning, and production A
 [![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)](https://matplotlib.org/)
-[![Learning](https://img.shields.io/badge/Status-Day_25_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
+[![Learning](https://img.shields.io/badge/Status-Day_32_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
 [Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
@@ -30,12 +30,12 @@ This repository documents my step-by-step engineering progression from foundatio
 
 ## 📈 Progress at a Glance
 
-**Completed: 25 Learning Days (Up to Day 25)** · **Current Stage: Machine Learning Foundations**
+**Completed: 32 Learning Days (Up to Day 32)** · **Current Stage: Supervised Classification**
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
-| **01** | Weights and Predictions | Map input features to target predictions using a linear weight and compute total absolute error | [`day01.py`](src/ml_core/foundations/day_01/day01.py) | ✅ |
-| **02** | Learning and Weight Updates | Iteratively refine a model weight using prediction error and a controlled learning rate | [`day02_learning_weight.py`](src/ml_core/foundations/day_02/day02_learning_weight.py) | ✅ |
+| **01** | Weights and Predictions | Map input features to target predictions using a linear weight and compute total absolute error | [`weights_and_predictions.py`](src/ml_core/foundations/day_01/weights_and_predictions.py) | ✅ |
+| **02** | Learning and Weight Updates | Iteratively refine a model weight using prediction error and a controlled learning rate | [`learning_weight.py`](src/ml_core/foundations/day_02/learning_weight.py) | ✅ |
 | **03** | Error, Squared Error, and MSE | Quantify model performance by computing residuals, squared errors, and Mean Squared Error (MSE) | [`loss.py`](src/ml_core/foundations/day_03/loss.py) | ✅ |
 | **04** | Gradient Descent | Derive analytical gradients of squared loss and update parameters opposite to the gradient slope | [`gradient_descent.py`](src/ml_core/foundations/day_04/gradient_descent.py) | ✅ |
 | **05** | Multiple Training Examples | Aggregate and average losses and gradients across a full batch of training examples | [`multiple_examples.py`](src/ml_core/foundations/day_05/multiple_examples.py) | ✅ |
@@ -61,10 +61,11 @@ This repository documents my step-by-step engineering progression from foundatio
 | **25** | Multiple Linear Regression with Scikit-Learn | Train a multivariate `LinearRegression` model on multi-feature data (size, bedrooms, age), inspect weight vectors (`coef_`) and bias (`intercept_`), evaluate generalization via MAE & MSE, and predict on unseen multivariate samples | [`multiple_linear_regression.py`](src/ml_core/foundations/day_25/multiple_linear_regression.py) | ✅ |
 | **26** | Polynomial Features & Non-Linear Regression | Transform single features into higher-order polynomial spaces via `PolynomialFeatures` to capture non-linear quadratic relationships, train `LinearRegression`, and evaluate predictions | [`polynomial_regression.py`](src/ml_core/foundations/day_26/polynomial_regression.py) | ✅ |
 | **27** | Model Complexity & Bias-Variance Trade-Off | Evaluate polynomial models across degrees ($d \in [1, 20]$), benchmark train vs. test MSE, and visualize underfitting vs. overfitting prediction curves via Matplotlib | [`model_complexity.py`](src/ml_core/foundations/day_27/model_complexity.py) | ✅ |
-| **28** | Regularization: Ridge vs. Lasso | Compare unregularized `LinearRegression`, L2 `Ridge` (weight shrinkage), and L1 `Lasso` (sparsity & feature selection) on multi-feature noisy data using scaled pipelines | [`ridge_lesso.py`](src/ml_core/foundations/day_28/ridge_lesso.py) | ✅ |
+| **28** | Regularization: Ridge vs. Lasso | Compare unregularized `LinearRegression`, L2 `Ridge` (weight shrinkage), and L1 `Lasso` (sparsity & feature selection) on multi-feature noisy data using scaled pipelines | [`ridge_lasso.py`](src/ml_core/foundations/day_28/ridge_lasso.py) | ✅ |
 | **29** | K-Fold Cross-Validation & Model Selection | Evaluate models using 5-Fold Cross-Validation (`cross_val_score`) in leak-free pipelines, quantify stability via fold variance ($\sigma$), select the optimal hyperparameter, and evaluate on held-out test data | [`cross_validation.py`](src/ml_core/foundations/day_29/cross_validation.py) | ✅ |
 | **30** | Hyperparameter Tuning with GridSearchCV | Automate hyperparameter search over $\alpha$ values for Ridge and Lasso using 10-fold `GridSearchCV` inside `StandardScaler` pipelines, compare CV scores, and evaluate on held-out test data | [`hyperparameter_tuning.py`](src/ml_core/foundations/day_30/hyperparameter_tuning.py) | ✅ |
 | **31** | End-to-End House Price Prediction Project | Build a complete regression workflow handling missing values, mixed numeric/categorical features (`ColumnTransformer`, `SimpleImputer`, `OneHotEncoder`), `GridSearchCV` Ridge tuning, `DummyRegressor` baseline comparison, residual analysis, and unseen category inference | [`house_price_project.py`](src/ml_core/foundations/day_31/house_price_project.py) | ✅ |
+| **32** | Introduction to Classification (Decision Trees) | Train a binary `DecisionTreeClassifier` on multi-feature student data (`hours studied`, `hours slept`) to predict discrete class labels (`0 = Fail`, `1 = Pass`) | [`first_classifier.py`](src/ml_core/classification/day_32/first_classifier.py) | ✅ |
 
 ---
 
@@ -74,38 +75,40 @@ This repository documents my step-by-step engineering progression from foundatio
 ml-local-ai-automation-lab/
 ├── src/
 │   └── ml_core/
-│       └── foundations/
-│           ├── day_01/   # Linear predictions & absolute loss
-│           ├── day_02/   # Iterative weight learning
-│           ├── day_03/   # Squared error & Mean Squared Error (MSE)
-│           ├── day_04/   # Single-feature Gradient Descent
-│           ├── day_05/   # Batch Gradient Descent across multiple examples
-│           ├── day_06/   # Full Linear Regression (weight + bias) & inference
-│           ├── day_07/   # Vectorized operations with NumPy arrays
-│           ├── day_08/   # Multivariate features & matrix dot products
-│           ├── day_09/   # Multi-feature Linear Regression training
-│           ├── day_10/   # Min-Max feature normalization
-│           ├── day_11/   # Reproducible shuffling & Train/Test evaluation
-│           ├── day_12/   # Diagnosing Overfitting vs. Underfitting
-│           ├── day_13/   # Validation-driven model selection
-│           ├── day_14/   # Leakage-free preprocessing pipelines
-│           ├── day_15/   # End-to-end Train/Val/Test ML workflow
-│           ├── day_16/   # MAE, MSE & RMSE from scratch + outlier analysis
-│           ├── day_17/   # Target scaling, gradient debugging & inverse transforms
-│           ├── day_18/   # Standardized regression metrics with Scikit-Learn
-│           ├── day_19/   # Residual and error analysis with Matplotlib diagnostics
-│           ├── day_20/   # Feature engineering: ratios, polynomial & interaction terms
-│           ├── day_21/   # Categorical encoding with OneHotEncoder & matrix assembly
-│           ├── day_22/   # Missing data handling & imputation with SimpleImputer
-│           ├── day_23/   # Full preprocessing pipelines with ColumnTransformer & Pipeline
-│           ├── day_24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
-│           ├── day_25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
-│           ├── day_26/   # Polynomial regression: non-linear feature transformation & evaluation
-│           ├── day_27/   # Model complexity: polynomial degrees, bias-variance trade-off & Matplotlib visualization
-│           ├── day_28/   # Regularization: Ridge (L2 shrinkage) vs. Lasso (L1 sparsity & feature selection)
-│           ├── day_29/   # K-Fold Cross-Validation: leak-free pipeline evaluation, fold variance & model selection
-│           ├── day_30/   # Hyperparameter tuning: GridSearchCV over Ridge & Lasso alpha values
-│           └── day_31/   # End-to-end House Price Project: preprocessing pipeline, GridSearchCV, baseline & inference
+│       ├── foundations/
+│       │   ├── day_01/   # Linear predictions & absolute loss
+│       │   ├── day_02/   # Iterative weight learning
+│       │   ├── day_03/   # Squared error & Mean Squared Error (MSE)
+│       │   ├── day_04/   # Single-feature Gradient Descent
+│       │   ├── day_05/   # Batch Gradient Descent across multiple examples
+│       │   ├── day_06/   # Full Linear Regression (weight + bias) & inference
+│       │   ├── day_07/   # Vectorized operations with NumPy arrays
+│       │   ├── day_08/   # Multivariate features & matrix dot products
+│       │   ├── day_09/   # Multi-feature Linear Regression training
+│       │   ├── day_10/   # Min-Max feature normalization
+│       │   ├── day_11/   # Reproducible shuffling & Train/Test evaluation
+│       │   ├── day_12/   # Diagnosing Overfitting vs. Underfitting
+│       │   ├── day_13/   # Validation-driven model selection
+│       │   ├── day_14/   # Leakage-free preprocessing pipelines
+│       │   ├── day_15/   # End-to-end Train/Val/Test ML workflow
+│       │   ├── day_16/   # MAE, MSE & RMSE from scratch + outlier analysis
+│       │   ├── day_17/   # Target scaling, gradient debugging & inverse transforms
+│       │   ├── day_18/   # Standardized regression metrics with Scikit-Learn
+│       │   ├── day_19/   # Residual and error analysis with Matplotlib diagnostics
+│       │   ├── day_20/   # Feature engineering: ratios, polynomial & interaction terms
+│       │   ├── day_21/   # Categorical encoding with OneHotEncoder & matrix assembly
+│       │   ├── day_22/   # Missing data handling & imputation with SimpleImputer
+│       │   ├── day_23/   # Full preprocessing pipelines with ColumnTransformer & Pipeline
+│       │   ├── day_24/   # Scikit-Learn Linear Regression: fitting, coef_/intercept_ & inference
+│       │   ├── day_25/   # Multivariate Linear Regression: multi-feature fitting, weights vector & inference
+│       │   ├── day_26/   # Polynomial regression: non-linear feature transformation & evaluation
+│       │   ├── day_27/   # Model complexity: polynomial degrees, bias-variance trade-off & Matplotlib visualization
+│       │   ├── day_28/   # Regularization: Ridge (L2 shrinkage) vs. Lasso (L1 sparsity & feature selection)
+│       │   ├── day_29/   # K-Fold Cross-Validation: leak-free pipeline evaluation, fold variance & model selection
+│       │   ├── day_30/   # Hyperparameter tuning: GridSearchCV over Ridge & Lasso alpha values
+│       │   └── day_31/   # End-to-end House Price Project: preprocessing pipeline, GridSearchCV, baseline & inference
+│       └── classification/
+│           └── day_32/   # Binary classification with DecisionTreeClassifier
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -144,15 +147,15 @@ pip install numpy pandas scikit-learn matplotlib
 Navigate to the repository root and execute any script directly:
 
 ```bash
-python src/ml_core/foundations/day_30/hyperparameter_tuning.py
 python src/ml_core/foundations/day_31/house_price_project.py
+python src/ml_core/classification/day_32/first_classifier.py
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 31 Learning Days Completed**  
+**Progress: 32 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
