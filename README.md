@@ -11,7 +11,7 @@ Building end-to-end mastery in machine learning, deep learning, and production A
 [![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)](https://matplotlib.org/)
-[![Learning](https://img.shields.io/badge/Status-Day_33_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
+[![Learning](https://img.shields.io/badge/Status-Day_34_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
 [Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
@@ -30,7 +30,7 @@ This repository documents my step-by-step engineering progression from foundatio
 
 ## 📈 Progress at a Glance
 
-**Completed: 33 Learning Days (Up to Day 33)** · **Current Stage: Supervised Classification**
+**Completed: 34 Learning Days (Up to Day 34)** · **Current Stage: Supervised Classification**
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
@@ -67,6 +67,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **31** | End-to-End House Price Prediction Project | Build a complete regression workflow handling missing values, mixed numeric/categorical features (`ColumnTransformer`, `SimpleImputer`, `OneHotEncoder`), `GridSearchCV` Ridge tuning, `DummyRegressor` baseline comparison, residual analysis, and unseen category inference | [`house_price_project.py`](src/ml_core/foundations/day_31/house_price_project.py) | ✅ |
 | **32** | Introduction to Classification (Decision Trees) | Train a binary `DecisionTreeClassifier` on multi-feature student data (`hours studied`, `hours slept`) to predict discrete class labels (`0 = Fail`, `1 = Pass`) | [`first_classifier.py`](src/ml_core/classification/day_32/first_classifier.py) | ✅ |
 | **33** | Logistic Regression & Class Probabilities | Train a binary `LogisticRegression` model, inspect predicted class probabilities (`predict_proba`) alongside discrete class labels (`predict`), and evaluate confidence | [`logistic_regression.py`](src/ml_core/classification/day_33/logistic_regression.py) | ✅ |
+| **34** | Classification Metrics & Evaluation | Evaluate binary classification performance using Confusion Matrix, Accuracy, Precision, Recall, F1 Score, and detailed `classification_report` | [`classification_metrics.py`](src/ml_core/classification/day_34/classification_metrics.py) | ✅ |
 
 ---
 
@@ -110,7 +111,8 @@ ml-local-ai-automation-lab/
 │       │   └── day_31/   # End-to-end House Price Project: preprocessing pipeline, GridSearchCV, baseline & inference
 │       └── classification/
 │           ├── day_32/   # Binary classification with DecisionTreeClassifier
-│           └── day_33/   # Logistic Regression: class probabilities (predict_proba) & binary classification
+│           ├── day_33/   # Logistic Regression: class probabilities (predict_proba) & binary classification
+│           └── day_34/   # Classification metrics: Confusion Matrix, Accuracy, Precision, Recall, F1 & report
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -151,13 +153,14 @@ Navigate to the repository root and execute any script directly:
 ```bash
 python src/ml_core/classification/day_32/first_classifier.py
 python src/ml_core/classification/day_33/logistic_regression.py
+python src/ml_core/classification/day_34/classification_metrics.py
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 33 Learning Days Completed**  
+**Progress: 34 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
