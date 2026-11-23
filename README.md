@@ -11,7 +11,7 @@ Building end-to-end mastery in machine learning, deep learning, and production A
 [![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)](https://matplotlib.org/)
-[![Learning](https://img.shields.io/badge/Status-Day_34_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
+[![Learning](https://img.shields.io/badge/Status-Day_34_Completed_·_Day_35_In_Progress-orange?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
 [Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
@@ -30,7 +30,7 @@ This repository documents my step-by-step engineering progression from foundatio
 
 ## 📈 Progress at a Glance
 
-**Completed: 34 Learning Days (Up to Day 34)** · **Current Stage: Supervised Classification**
+**Completed: 34 Learning Days** · **Current Stage: Supervised Classification (Day 35 In Progress ⏳)**
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
@@ -68,6 +68,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **32** | Introduction to Classification (Decision Trees) | Train a binary `DecisionTreeClassifier` on multi-feature student data (`hours studied`, `hours slept`) to predict discrete class labels (`0 = Fail`, `1 = Pass`) | [`first_classifier.py`](src/ml_core/classification/day_32/first_classifier.py) | ✅ |
 | **33** | Logistic Regression & Class Probabilities | Train a binary `LogisticRegression` model, inspect predicted class probabilities (`predict_proba`) alongside discrete class labels (`predict`), and evaluate confidence | [`logistic_regression.py`](src/ml_core/classification/day_33/logistic_regression.py) | ✅ |
 | **34** | Classification Metrics & Evaluation | Evaluate binary classification performance using Confusion Matrix, Accuracy, Precision, Recall, F1 Score, and detailed `classification_report` | [`classification_metrics.py`](src/ml_core/classification/day_34/classification_metrics.py) | ✅ |
+| **35** | Binary Classifier from Scratch | Implement binary logistic classification from scratch in NumPy: Sigmoid activation, gradient descent optimization, and Binary Cross-Entropy loss | [`binary_classifier_from_scratch.py`](src/ml_core/classification/day_35/binary_classifier_from_scratch.py) | ⏳ *(In Progress)* |
 
 ---
 
@@ -112,7 +113,8 @@ ml-local-ai-automation-lab/
 │       └── classification/
 │           ├── day_32/   # Binary classification with DecisionTreeClassifier
 │           ├── day_33/   # Logistic Regression: class probabilities (predict_proba) & binary classification
-│           └── day_34/   # Classification metrics: Confusion Matrix, Accuracy, Precision, Recall, F1 & report
+│           ├── day_34/   # Classification metrics: Confusion Matrix, Accuracy, Precision, Recall, F1 & report
+│           └── day_35/   # Binary classifier from scratch: Sigmoid, BCE loss & gradient descent (In Progress)
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -154,13 +156,14 @@ Navigate to the repository root and execute any script directly:
 python src/ml_core/classification/day_32/first_classifier.py
 python src/ml_core/classification/day_33/logistic_regression.py
 python src/ml_core/classification/day_34/classification_metrics.py
+python src/ml_core/classification/day_35/binary_classifier_from_scratch.py
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 34 Learning Days Completed**  
+**Progress: 34 Learning Days Completed (Day 35 In Progress ⏳)**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
