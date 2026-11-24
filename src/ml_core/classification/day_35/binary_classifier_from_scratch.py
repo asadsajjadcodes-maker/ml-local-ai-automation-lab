@@ -77,4 +77,39 @@ for step in range(steps):
     if step % 200 == 0:
         print(f"Step: {step:4d}, Loss: {loss:.4f}")
 
+print()
+
+
+# ---------------------------------------------------------
+# Inference: Predicting Pass/Fail on Unseen Test Samples
+# ---------------------------------------------------------
+# New students with different study hours (unseen during training)
+new_students = np.array([
+    [3.5],
+    [5.5],
+    [7.5],
+    [9.0]
+], dtype=float)
+
+# Forward pass using learned parameters (weight & bias)
+z = new_students @ weight + bias
+probabilities = sigmoid(z)
+
+# Convert probabilities into discrete binary class labels using 0.5 decision threshold
+# If probability >= 0.5 -> 1 (Pass), else -> 0 (Fail)
+predictions = (probabilities >= 0.5).astype(int)
+
+print("Inference on Unseen Students:")
+for hours, probability, prediction in zip(
+    new_students.flatten(),
+    probabilities,
+    predictions
+):
+    result = "Pass" if prediction == 1 else "Fail"
+    print(
+        f"Hours: {hours:4.1f} | "
+        f"Probability: {probability:.4f} | "
+        f"Prediction: {result}"
+    )
+
 
