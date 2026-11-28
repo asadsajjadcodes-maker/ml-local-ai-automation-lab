@@ -11,7 +11,7 @@ Building end-to-end mastery in machine learning, deep learning, and production A
 [![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)](https://matplotlib.org/)
-[![Learning](https://img.shields.io/badge/Status-Day_36_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
+[![Learning](https://img.shields.io/badge/Status-Day_37_Completed-2ea44f?style=for-the-badge)](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab)
 
 [Repository](https://github.com/asadsajjadcodes-maker/ml-local-ai-automation-lab) · [My GitHub Profile](https://github.com/asadsajjadcodes-maker)
 
@@ -30,7 +30,7 @@ This repository documents my step-by-step engineering progression from foundatio
 
 ## 📈 Progress at a Glance
 
-**Completed: 36 Learning Days (Up to Day 36)** · **Current Stage: Supervised Classification**
+**Completed: 37 Learning Days (Up to Day 37)** · **Current Stage: Supervised Classification**
 
 | Day | Topic | Core Implementation & Concepts Practised | Implementation | Status |
 |---:|---|---|:---:|:---:|
@@ -70,6 +70,7 @@ This repository documents my step-by-step engineering progression from foundatio
 | **34** | Classification Metrics & Evaluation | Evaluate binary classification performance using Confusion Matrix, Accuracy, Precision, Recall, F1 Score, and detailed `classification_report` | [`classification_metrics.py`](src/ml_core/classification/day_34/classification_metrics.py) | ✅ |
 | **35** | Binary Classifier from Scratch | Implement binary logistic classification from scratch in pure NumPy: Sigmoid activation, gradient descent parameter optimization, Binary Cross-Entropy loss, and unseen sample inference | [`binary_classifier_from_scratch.py`](src/ml_core/classification/day_35/binary_classifier_from_scratch.py) | ✅ |
 | **36** | Zero-Safe Classification Metrics | Evaluate NumPy-based binary predictions using Confusion Matrix, Accuracy, Precision, Recall, and F1 Score with `zero_division=0` safety handling | [`classification_metrics.py`](src/ml_core/classification/day_36/classification_metrics.py) | ✅ |
+| **37** | Confusion Matrix Decomposition & Manual Metrics | Extract confusion matrix quadrants (TN, FP, FN, TP) and manually derive Accuracy, Precision, Recall, and F1 Score from matrix elements | [`confusion_matrix.py`](src/ml_core/classification/day_37/confusion_matrix.py) | ✅ |
 
 ---
 
@@ -116,7 +117,8 @@ ml-local-ai-automation-lab/
 │           ├── day_33/   # Logistic Regression: class probabilities (predict_proba) & binary classification
 │           ├── day_34/   # Classification metrics: Confusion Matrix, Accuracy, Precision, Recall, F1 & report
 │           ├── day_35/   # Binary classifier from scratch: Sigmoid, BCE loss, gradient descent & inference
-│           └── day_36/   # Zero-safe classification metrics with NumPy arrays & zero_division=0 handling
+│           ├── day_36/   # Zero-safe classification metrics with NumPy arrays & zero_division=0 handling
+│           └── day_37/   # Confusion matrix decomposition: TN, FP, FN, TP extraction & manual metrics derivation
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -160,13 +162,14 @@ python src/ml_core/classification/day_33/logistic_regression.py
 python src/ml_core/classification/day_34/classification_metrics.py
 python src/ml_core/classification/day_35/binary_classifier_from_scratch.py
 python src/ml_core/classification/day_36/classification_metrics.py
+python src/ml_core/classification/day_37/confusion_matrix.py
 ```
 
 ---
 
 <div align="center">
 
-**Progress: 36 Learning Days Completed**  
+**Progress: 37 Learning Days Completed**  
 *Learn the concept. Implement it. Test it. Understand why it works.*
 
 </div>
